@@ -9,6 +9,24 @@
   </head>
 
   <body>
+    <% flash.each do |message_type, message| %>
+      <div class="custom-alert">
+
+        <div class="custom-alert-child alert alert-<%=message_type %> alert-dismissable" role="alert">
+
+          <button type="button" class="close" data-dismiss="alert">&times;</button>
+          <p><%= message %></p>
+        </div>
+      </div>
+
+      <% end %>
     <%= yield %>
   </body>
+
+  <div class="custom-alert" id="snackbar">
+
+    <div class="custom-alert-child alert alert-danger alert-dismissable" role="alert" >
+      <p></p>
+    </div>
+  </div>
 </html>

@@ -1,0 +1,50 @@
+
+<div class="page-content">
+    <div class="container">
+        <h3 class="text-heading font-lighter page-title">
+            Vote
+            <br>
+            <div class="max-600">Welcome to Wakanda voting system. Have a great day!</div>
+        </h3>
+        <div class="registration-form max-800 max-center mt-5 claim-form">
+            <div class="row request-code-target go-back-container  max-center max-600">
+                <div class="col-md-12">
+                     <%= form_tag "", class: 'L-voting-form' do %>
+                        <div class="form-group label-action ">
+                            <%= text_field_tag :first_name, "", class: 'form-control L-voting-form-fname' %>
+                            <label for="first_name">*First Name</label>
+                            <span class="error-message">
+                              Please enter a valid first name
+                          </span>
+                        </div>
+                        <div class="form-group label-action">
+                            <%= text_field_tag :last_name, "", class: 'form-control L-voting-form-lname' %>
+                            <label for="last_name">*Last Name</label>
+                            <span class="error-message">
+                              Please enter a valid last name
+                          </span>
+
+                        </div>
+                        <div class="form-group label-action">
+                            <%= date_field_tag :bdate, "", class: 'dirty form-control L-voting-form-bdate' %>
+                            <label for="email">*Birth Date</label>
+                            <span class="error-message">
+                              Please enter a valid date
+                          </span>
+                        </div>
+                        <div class="form-group label-action">
+                            <%= check_box :yes_no, "", class: 'check-control' %>
+                            <label for="yes_no">Check the box if you agree that Challa should be the king!</label>
+                        </div>
+                        <div class="form-group">
+                            <div class="text-center mt-5 btns-margin">
+
+                                <%= button_tag "Proceed", class: 'btn btn-main btn-rounded min-250 mobile-100' %>
+                            </div>
+                        </div>
+                       <% end %>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
