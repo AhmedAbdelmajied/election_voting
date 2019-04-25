@@ -5,7 +5,7 @@ development:
   # I've started only one borker for the assignment purpose
   KAFKA_BORKERS:
     - "localhost:9092"
-  # I've created the "votes" topic
+  # I've created the "votes" topic with forever retention time (big number)
   KAFKA_VOTES_TOPIC: "votes"
 
 
