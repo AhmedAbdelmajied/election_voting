@@ -17,9 +17,12 @@ class VotesController < ApplicationController
       $kafka_producer.deliver_messages
     rescue Kafka::Error
       flash[:danger] = "Something went wrong. Please try again later!"
-      format.html { render :new }
+      respond_to do |format|
+       format.html { redirect_to root_url }
+      end
+      return
     end
-    flash[:success] = "Configurations!"
+    flash[:success] = "Congratulations!"
     respond_to do |format|
      format.html { render :new }
     end
