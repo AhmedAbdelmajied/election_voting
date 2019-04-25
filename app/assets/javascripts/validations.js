@@ -31,7 +31,7 @@ $(document).on('keyup', '.L-voting-form-fname , .L-voting-form-lname', function(
 })
 
 
-function isValidName(phone){
+function isValidName(name){
   var pattern =/^([a-zA-Z0-9_-]){3,10}$/;
-  return pattern.test(phone);
+  return pattern.test(name);
 }
