@@ -1,0 +1,21 @@
+default: &defaults
+
+development:
+  # Here we add a list of kafka brokers
+  # I've started only one borker for the assignment purpose
+  KAFKA_BORKERS:
+    - "localhost:9092"
+  # I've created the "votes" topic
+  KAFKA_VOTES_TOPIC: "votes"
+
+
+
+
+test:
+ <<: *defaults
+
+staging:
+   <<: *defaults
+
+production:
+  <<: *defaults
