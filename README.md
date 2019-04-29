@@ -1,24 +1,25 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple hands-on app with Rails and Kafka. It's an election app to collect votes and publish them to KAFKA using the producer API.
 
-Things you may want to cover:
+To get the app up and run you have to:
 
-* Ruby version
+* Download Kafka from https://kafka.apache.org/downloads
 
-* System dependencies
+* Unzip the source and cd to the KAFKA directory
 
-* Configuration
+* Run Zookeeper server "bin/zookeeper-server-start.sh config/zookeeper.properties"
 
-* Database creation
+* Run at least one KAFKA broker "bin/kafka-server-start.sh config/server.properties"
 
-* Database initialization
+* Create KAFKA "votes" topic "bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic votes"
 
-* How to run the test suite
+* Pull the repo
 
-* Services (job queues, cache servers, search engines, etc.)
+* Bundle install
 
-* Deployment instructions
+* Rail s
 
-* ...
+* To test your work. Use the consumer API to make sure everything is working well.
+
+* Have a good democratic day!
